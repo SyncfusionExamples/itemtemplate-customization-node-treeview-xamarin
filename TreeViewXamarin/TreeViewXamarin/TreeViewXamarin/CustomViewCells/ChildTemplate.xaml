@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TreeViewXamarin.ChildTemplate">
+  <ViewCell.View>
+        <Grid x:Name="grid" Padding="0,5,5,5" RowSpacing="0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Padding="0,5,5,5">
+                <Image Source="{Binding Content.ImageIcon}" VerticalOptions="Center" HorizontalOptions="Center"
+                       HeightRequest="35" WidthRequest="35"/>
+            </Grid>
+            <Grid Grid.Column="1" RowSpacing="1" Padding="1,0,0,0" VerticalOptions="Center">
+                <Label LineBreakMode="NoWrap" Text="{Binding Content.ItemName}" VerticalTextAlignment="Center"/>
+            </Grid>
+        </Grid>
+    </ViewCell.View>
+</ViewCell>
